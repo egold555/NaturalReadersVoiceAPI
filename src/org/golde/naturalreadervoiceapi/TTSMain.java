@@ -15,7 +15,7 @@ public class TTSMain {
 	
 	public static void main(String[] args) throws IOException {
 		
-		downloadTTS(Voice.English.US.Tracy, 1, "Hello world this is a test");
+		downloadTTS(Voice.English.UK.Audrey, 1, "Hello world this is a test");
 	}
 	
 	private static void downloadTTS(Voice voice, int speed, String text) throws IOException {
@@ -24,7 +24,7 @@ public class TTSMain {
 		RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), "{\"t\":\"" + text + "\"}");
 		
 		Request request = new Request.Builder()
-		  .url("https://kfiuqykx63.execute-api.us-east-1.amazonaws.com/Dev/tts?r=" + voice.r + "&s=" + speed + "&l=" + voice.l + "&v=" + voice.v)
+		  .url("https://kfiuqykx63.execute-api.us-east-1.amazonaws.com/Dev/tts?r=" + voice.r + "&s=" + speed + "&l=0&v=" + voice.v)
 		  .post(body)
 		  .addHeader("Accept", "*/*")
 		  .addHeader("Content-Type", "application/x-www-form-urlencoded")

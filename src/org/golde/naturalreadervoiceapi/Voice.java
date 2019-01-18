@@ -7,7 +7,6 @@ public class Voice {
 	private static final String ATT = "att";
 	
 	public final int r;
-	public final int l = 0;
 	public final String v;
 	
 	private Voice(int r, String v) {
